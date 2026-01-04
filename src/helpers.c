@@ -45,12 +45,11 @@ void	bring_to_top(t_stack **stack, int value)
 	if (pos <= size / 2)
 	{
 		while ((*stack)->value != value)
-			write(1,ra(stack), 3);
+			write (1, ra(stack), 3);
 	}
 	else
 		while ((*stack)->value != value)
 			write(1, rra(stack), 4);
-
 }
 
 int	ft_issorted(t_stack *stack_a, t_stack *stack_b)

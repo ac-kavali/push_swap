@@ -46,7 +46,10 @@ static t_stack	*create_stack(char **numbers, char *lst)
 	{
 		aux = ft_atoi_safe(numbers[i]);
 		if (aux > 2147483647 || aux < -2147483648)
+		{
+			free_stacks(&stack_a);
 			fexit_error(lst, NULL, numbers);
+		}
 		add_new(&stack_a, (int)aux);
 		i++;
 	}
