@@ -84,7 +84,7 @@ static void	zipper(t_stack **stack_a, t_stack **stack_b)
 
 	i = 3;
 	s_a_cpy = get(*stack_a, stack_size(*stack_a) - i--);
-	while (stack_size(s_a_cpy))
+	while (stack_size(s_a_cpy) && stack_size(*stack_b))
 	{
 		if (max(s_a_cpy) < max(*stack_b))
 			write(1, pa(stack_a, stack_b), 3);
